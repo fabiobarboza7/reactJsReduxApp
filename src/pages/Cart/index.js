@@ -83,6 +83,9 @@ const mapStateToProps = state => ({
     ...product,
     subtotal: formatPrice(product.price * product.amount),
   })),
+  total: state.cart.reduce((total, product) => {
+    return total + product.price * product.amount;
+  }, 0),
 });
 
 const mapDispatchToProps = dispatch =>
