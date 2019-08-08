@@ -45,12 +45,7 @@ function Cart({ cart, dispatch }) {
                 <strong>R$258,80</strong>
               </td>
               <td>
-                <button
-                  type="button"
-                  onClick={() =>
-                    dispatch({ type: 'REMOVE_FROM_CART', id: product.id })
-                  }
-                >
+                <button type="button" onClick={() => dispatch()}>
                   <MdDelete size={20} color="#7159c1" />
                 </button>
               </td>
